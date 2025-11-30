@@ -1,7 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState,useRef } from 'react';
 import { Container, Row, Col, Form, Button, Alert } from 'react-bootstrap';
 
+
+
+
+
 const Contact = () => {
+
+
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
+        form.current,
+        "YOUR_PUBLIC_KEY"
+      )
+      .then(
+        (result) => {
+          alert("Message sent successfully!");
+          console.log(result.text);
+        },
+        (error) => {
+          alert("Failed to send message.");
+          console.log(error.text);
+        }
+      );
+  };
+
+
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -89,6 +122,7 @@ const Contact = () => {
         </Row>
       </Container>
     </section>
+
   );
 };
 

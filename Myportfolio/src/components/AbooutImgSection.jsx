@@ -1,6 +1,6 @@
 
 import { Container, Row, Col, Card } from 'react-bootstrap';
-
+import Image from '/imageA.JPG';
 
 const AboutImgSection = () => {
     return(
@@ -11,7 +11,7 @@ const AboutImgSection = () => {
       <div className='aboutImgCont'>
         <div class="avatar" aria-hidden="false">
     
-          <img src="/imageA.JPG"
+          <img src={Image}
                alt="Profile photo of Anil Kumar Yadav"/>
         </div>
 

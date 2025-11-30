@@ -23,7 +23,7 @@ function App() {
       <Education></Education>
       <hr/>
       <WorkExperience></WorkExperience>
-      <Skills></Skills>
+      
       <Projects></Projects>
       <Contact></Contact>
       <Footer></Footer>

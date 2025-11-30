@@ -12,6 +12,7 @@ const Skills = () => {
   ];
 
   return (
+    <Container>
     <section id="skills" className="section-padding">
       <Container>
         <h2 className="section-title">My Skills</h2>
@@ -34,6 +35,8 @@ const Skills = () => {
         </Row>
       </Container>
     </section>
+</Container>
+
   );
 };
 
